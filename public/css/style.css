@@ -1,0 +1,12 @@
+body{
+	background-color: pink;
+	font-family: cursive;
+}
+
+ul{
+	color: blue;
+}
+
+li{
+	list-style: none;
+}
