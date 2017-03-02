@@ -16,10 +16,6 @@ MongoClient.connect('mongodb://127.0.0.1:27017/carnet_adresse', (err, database) 
   })
 })
 
-
-
-
-
 app.get('/',  (req, res) => {
    console.log('la route route get / = ' + req.url)
  
@@ -30,8 +26,6 @@ app.get('/',  (req, res) => {
     res.render('index.ejs', {adresse : resultat})
 
     }) 
-    
-
 })
 
 
@@ -39,7 +33,6 @@ app.get('/formulaire',  (req, res) => {
    console.log('la route  get / = ' + req.url)
    res.sendFile(__dirname + "/public/html/forme.htm")
 })
-
 
 app.post('/adresse',  (req, res) => {
   db.collection('adresse').save(req.body, (err, result) => {
